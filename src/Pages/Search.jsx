@@ -22,8 +22,8 @@ export default function Search () {
 
     useEffect(() => {
         // dispatch(getRepos(query));
-        // getRepos(query, dispatch);
-    })
+        getRepos(query, dispatch);
+    } , [])
     
     return (
         <div>
@@ -31,11 +31,11 @@ export default function Search () {
             {isError && <h3>Oops! Something went wrong!</h3>}
             {repos.map((item) => (
                 <RepoCard 
-                name={item.items.name} 
-                description={item.items.description} 
-                language={item.items.language} 
-                html_url={item.items.html_url} 
-                type={item.items.type} />
+                name={item.name} 
+                description={item.description} 
+                language={item.language} 
+                html_url={item.html_url} 
+                type={item.type} />
             ))}
         </div>
     )

@@ -9,8 +9,8 @@ export const getRepos = (query, dispatch) => {
         fetch(`https://api.github.com/search/repositories?q=${query}&page=1&per_page=10`)
         .then((res) => res.json())
         .then((res) => {
-            console.log(res)
-            const repoSuccessAction = getRepoSuccess(res);
+            console.log(res.incomplete_results, res.items, "RES")
+            const repoSuccessAction = getRepoSuccess(res.items);
             dispatch(repoSuccessAction);
         })
         .catch((res) => {
