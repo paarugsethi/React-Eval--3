@@ -1,0 +1,7 @@
+// CONSTANTS
+export const appConstants = {
+    GET_REPO_REQUEST: "GET_REPO_REQUEST",
+    GET_REPO_SUCCESS: "GET_REPO_SUCCESS",
+    GET_REPO_FAILURE: "GET_REPO_FAILURE"
+};
+  

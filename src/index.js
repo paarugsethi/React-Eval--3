@@ -6,13 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
 import { store } from './Redux/store';
 import { BrowserRouter } from 'react-router-dom';
+import { AppContextProvider } from './Context/Context';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <AppContextProvider>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </AppContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

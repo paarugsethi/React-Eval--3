@@ -7,7 +7,7 @@ export default function Login () {
 
     const handleLogin = () => {
         const isAuth = true;
-        console.log(isAuth)
+        
         const action = loginSuccess(isAuth);
         dispatch(action);
     }
