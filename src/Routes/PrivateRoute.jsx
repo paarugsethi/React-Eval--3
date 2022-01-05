@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 import { Redirect, Route } from "react-router-dom";
 
 export default function PrivateRoute({exact, path, children}){
-    const isAuth = useSelector((state) => state.auth.isAuth);
+    const isAuth = useSelector((state) => state.auth);
 
-    useEffect(() => {
+    // useEffect(() => {
         if (!isAuth){
             return <Redirect to="/"></Redirect>
         }
 
-    }, [isAuth])
+    // }, [isAuth])
 
     return (
         <Route exact path="/home">

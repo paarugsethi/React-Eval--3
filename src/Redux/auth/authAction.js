@@ -5,7 +5,7 @@ export const loginSuccess = (isAuth) => {
     return {
         type: actionConstants.LOGIN_SUCCESS,
         payload: {
-            isAuth: isAuth
+            isAuth: true
         }
     }
 }
